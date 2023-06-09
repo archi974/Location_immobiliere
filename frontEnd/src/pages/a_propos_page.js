@@ -1,15 +1,9 @@
-import React from 'react';
-import Header from '../components/header';
-import Footer from '../components/footer';
+import Layout from '../components/layout';
 
 export default function APropos() {
     return (
-        <>
-            <Header />
-            <main>
-            <p>AF PROPOS</p>
-            </main>
-            <Footer />
-        </>
+        <Layout>
+            <p>A PROPOS</p>
+        </Layout>
     )
 }
