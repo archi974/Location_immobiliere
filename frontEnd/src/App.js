@@ -10,11 +10,10 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" exact element={<Home />} />
-          <Route path="/home" exact element={<Home />} />
-          <Route path="/a_propos" exact element={<APropos />}/>
-          <Route path="/fiche_logement" exact element={<FicheLogement />}/>
-          <Route path="*" element={<Navigate to="/404" replace />} />
+          <Route path="/a-propos" exact element={<APropos />}/>
+          <Route path="/fiche-logement" exact element={<FicheLogement />}/>
           <Route path="/404" exact element={<ErrorPage />}/>
+          <Route path="*" element={<Navigate to="/404" replace />} />
         </Routes>
       </Router>
   );
