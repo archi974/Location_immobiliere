@@ -1,13 +1,13 @@
 import Layout from '../components/layout';
-import './scss/home.css';
+import Banner from '../components/banner';
 
 export default function Home() {
+    const imgHome = "https://cdn.discordapp.com/attachments/1081227920770596865/1116732683737899038/IMG.png";
+    const altHome = "bannière verte colline avec vue sur montagne";
+
     return (
         <Layout>
-            <div className="banner">
-                <h1>Chez vous, partout et ailleurs</h1>
-                <img className="bannerImg" src="https://cdn.discordapp.com/attachments/1081227920770596865/1116739204068691968/IMG_1.jpg" alt="bannière"></img>
-            </div>
+            <Banner imgSrc={imgHome} imgAlt={altHome}/>
         </Layout>
     )
 }

@@ -1,6 +1,4 @@
 import React from "react";
-import './scss/header.module.css';
-import '../App.css';
 
 const Header = () => {
     return (
