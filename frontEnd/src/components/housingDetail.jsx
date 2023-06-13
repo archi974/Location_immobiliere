@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import FavoriteStar from './favoriteStar';
+import RatingStar from './ratingStar';
 import Carousel from './carousel';
 
 const HousingDetail = () => {
@@ -29,15 +29,7 @@ const HousingDetail = () => {
             </ul>
             <div className='ownerInfo'>
                 <div>
-                    {/* {logement?.rating.map((rating, i) => (
-                            <div key={i}>
-                            </div>
-                        ))} */}
-                    <FavoriteStar filled={logement?.rating} />
-                    <FavoriteStar filled={logement?.rating} />
-                    <FavoriteStar filled={logement?.rating} />
-                    <FavoriteStar filled={logement?.rating} />
-                    <FavoriteStar filled={logement?.rating} />
+                    <RatingStar rating={logement?.rating} />
                 </div>
                 <div className="ownerProfile">
                     <p>{logement?.host.name}</p>
