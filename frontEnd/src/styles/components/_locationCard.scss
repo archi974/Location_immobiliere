@@ -6,9 +6,12 @@
     .card-bloc-item {
         margin: 20px;
         position: relative;
-        display: flex;
-        align-items: flex-end;
         max-width: 340px;
+
+        a{
+            display: flex;
+            align-items: flex-end;
+        }
 
         .card-title {
             position: absolute;
