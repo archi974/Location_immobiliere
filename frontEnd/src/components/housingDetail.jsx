@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import FavoriteStar from './favoriteStar';
+import Carousel from './carousel';
 
 const HousingDetail = () => {
     const { id } = useParams();
     const [logement, setLogement] = useState();
-    const [rating, setRating] = useState(0);
 
     useEffect(() => {
         fetch('https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P9+React+1/logements.json')
@@ -19,7 +19,7 @@ const HousingDetail = () => {
 
     return (
         <article className="housingDetailComponent">
-            <p>CAROUSELLE</p>
+            <Carousel images={logement?.pictures} />
             <h1>{logement?.title}</h1>
             <p>{logement?.location}</p>
             <ul>
