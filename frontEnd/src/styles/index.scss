@@ -1,8 +1,10 @@
 @import "./app";
-@import "./components/404";
-@import "./components/aProposPage";
-@import "./components/ficheLogement";
+@import "./pages/404";
+@import "./pages/about";
+@import "./pages/listingDetail";
+
 @import "./components/footer";
 @import "./components/header";
-@import "./components/home";
+@import "./components/banner";
 @import "./components/layout";
+@import "./components/locationCard"

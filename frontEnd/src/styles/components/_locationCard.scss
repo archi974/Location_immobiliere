@@ -1,0 +1,26 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    .card-bloc-item {
+        margin: 20px;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+
+        h2 {
+            position: absolute;
+            font-size: 18px;
+            margin: 15px 19px;
+            color: $white;
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    }
+
+}

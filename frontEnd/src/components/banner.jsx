@@ -1,11 +1,11 @@
 import React from 'react';
 
 const Banner = (props) => {
-    const { imgSrc, imgAlt} = props;
-    
+    const { title, imgSrc, imgAlt} = props;
+
     return (
         <section className="banner">
-            <h1>Chez vous, partout et ailleurs</h1>
+            <h1>{title}</h1>
             <img className="bannerImg" src={imgSrc} alt={imgAlt} />
         </section>
     );
