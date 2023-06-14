@@ -1,12 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-}
-
 $white : #fff;
 $black: #000;
 $red: #ff6060;
@@ -14,6 +7,13 @@ $redOpacity: rgb(255, 96, 96, 0.6);
 $grey: #E3E3E3; // pas bon
 $lightgrey: #f6f6f6;
 $gradientRed: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 0, 0, 0.5));
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
 
 body {
     background-color: $white;
