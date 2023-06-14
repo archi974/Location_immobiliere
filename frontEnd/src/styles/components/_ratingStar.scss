@@ -1,3 +1,8 @@
 .starRating {
-    color: $red;
+    .fullStar{
+        fill: $red;
+    }
+    .emptyStar{
+        fill: $lightgrey;
+    }
 }
