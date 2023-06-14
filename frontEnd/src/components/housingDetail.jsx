@@ -1,28 +1,30 @@
 import React, { useState, useEffect } from 'react';
+import NotFoundPage from '../pages/404';
 import { useParams } from 'react-router-dom';
+import logements from '../fixture/logements.json'
 import RatingStar from './ratingStar';
 import Carousel from './carousel';
+import Collapse from './collapse';
 
 const HousingDetail = () => {
     const { id } = useParams();
     const [logement, setLogement] = useState();
 
     useEffect(() => {
-        fetch('https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P9+React+1/logements.json')
-            .then(res => res.json())
-            .then(data => {
-                const logementData = data.find(item => item.id === id);
-                setLogement(logementData);
-            })
-            .catch(err => console.error("Erreur lors de la récupération des données :", err));
+        const logementData = logements.find(item => item.id === id);
+        if (logementData) {
+            setLogement(logementData);
+        }
     }, [id]);
-
+    if (!logement) {
+        return <NotFoundPage />;
+    }
     return (
         <article className="housingDetailComponent">
             <Carousel images={logement?.pictures} />
             <h1>{logement?.title}</h1>
             <p>{logement?.location}</p>
-            <ul>
+            <ul className='tags'>
                 {logement?.tags.map((item, i) => (
                     <li key={i}>{item}</li>
                 ))}
@@ -36,7 +38,23 @@ const HousingDetail = () => {
                     <img src={logement?.host.picture} alt="profil du propriétaire" />
                 </div>
             </div>
-            <p>COLLAPSE</p>
+            <div className="collapse">
+                <Collapse title="Description">
+                    <p>
+                        {logement?.description}
+                    </p>
+                </Collapse>
+                <Collapse title="Equipements">
+                    <ul>
+                        <li>{logement?.equipments[0]}</li>
+                        <li>{logement?.equipments[1]}</li>
+                        <li>{logement?.equipments[2]}</li>
+                        <li>{logement?.equipments[3]}</li>
+                        <li>{logement?.equipments[4]}</li>
+                    </ul>
+
+                </Collapse>
+            </div>
         </article>
     );
 };

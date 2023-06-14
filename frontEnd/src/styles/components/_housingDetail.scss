@@ -13,7 +13,7 @@
         font-size: 14px;
     }
 
-    ul {
+    .tags {
         display: flex;
         list-style: none;
         width: 100%;
@@ -41,6 +41,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin-bottom: 13px;
 
         .ownerProfile {
             display: flex;

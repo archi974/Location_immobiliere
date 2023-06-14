@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Home from './pages/home';
-import APropos from './pages/about';
+import About from './pages/about';
 import NotFoundPage from './pages/404';
 import ListingDetail from './pages/listingDetails';
 
@@ -9,7 +9,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" exact element={<Home />} />
-          <Route path="/a-propos" exact element={<APropos />}/>
+          <Route path="/a-propos" exact element={<About />}/>
           <Route path="/fiche-logement/:id" exact element={<ListingDetail />}/>
           <Route path="/404" exact element={<NotFoundPage />}/>
           <Route path="*" element={<Navigate to="/404" replace />} />
