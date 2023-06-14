@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Carousel = ({ images }) => {
+const SlideShow = ({ images }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const goToPreviousImg = () => {
@@ -37,4 +37,4 @@ const Carousel = ({ images }) => {
     );
 };
 
-export default Carousel;
+export default SlideShow;

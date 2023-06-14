@@ -1,27 +1,26 @@
 import React, { useState, useEffect } from 'react';
-import NotFoundPage from '../pages/404';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import logements from '../fixture/logements.json'
+import SlideShow from './slideShow';
 import RatingStar from './ratingStar';
-import Carousel from './carousel';
 import Collapse from './collapse';
 
 const HousingDetail = () => {
     const { id } = useParams();
+    const navigate = useNavigate();
     const [logement, setLogement] = useState();
 
     useEffect(() => {
         const logementData = logements.find(item => item.id === id);
-        if (logementData) {
-            setLogement(logementData);
+        if (!logementData) {
+            return navigate("/404");
         }
-    }, [id]);
-    if (!logement) {
-        return <NotFoundPage />;
-    }
+        setLogement(logementData);
+    }, [id, navigate]);
+
     return (
         <article className="housingDetailComponent">
-            <Carousel images={logement?.pictures} />
+            <SlideShow images={logement?.pictures} />
             <h1>{logement?.title}</h1>
             <p>{logement?.location}</p>
             <ul className='tags'>
