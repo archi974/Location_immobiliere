@@ -1,22 +1,55 @@
 .banner {
-    margin: 30px 20px 22px 20px;
+    margin: 0 20px 22px 20px;
     height: 111px;
     display: flex;
     align-items: center;
     position: relative;
-    
+
     h1 {
         position: absolute;
-        font-size: 24px;
+        font-size: 1.5rem;
+        font-weight: 500;
         color: #fff;
         z-index: 1;
         padding-left: 16px;
     }
+
     .bannerImg {
         width: 100%;
         height: 100%;
         object-fit: cover;
         border-radius: 10px;
         filter: contrast(0.5);
+
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .banner {
+        h1 {
+            padding-left: 0;
+            width: 100%;
+            text-align: center;
+        }
+        .bannerImg {
+            content: url("https://cdn.discordapp.com/attachments/1081227920770596865/1116737202408398898/IMG.jpg");
+        }
+    }
+}
+
+@media only screen and (min-width : 1440px) {
+    .banner {
+        margin: 30px 0 22px 0;
+        height: 223px;
+        border-radius: 25px;
+
+        h1 {
+            text-align: center;
+            width: 100%;
+            padding-left: 0;
+            font-size: 3rem
+        }
+
+        
     }
 }

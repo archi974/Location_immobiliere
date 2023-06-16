@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import logements from '../fixture/logements.json'
+import Logements from '../fixture/logements.json'
 import SlideShow from './slideShow';
 import RatingStar from './ratingStar';
 import Collapse from './collapse';
@@ -11,11 +11,16 @@ const HousingDetail = () => {
     const [logement, setLogement] = useState();
 
     useEffect(() => {
-        const logementData = logements.find(item => item.id === id);
-        if (!logementData) {
-            return navigate("/404");
+        try {
+            const logementData = Logements.find(item => item.id === id);
+            console.log(!logementData);
+            if (!logementData) {
+                return navigate("/404");
+            }
+            setLogement(logementData);
+        } catch (error) {
+            console.error('Erreur lors de la récupération des données : ', error)
         }
-        setLogement(logementData);
     }, [id, navigate]);
 
     return (
@@ -45,11 +50,9 @@ const HousingDetail = () => {
                 </Collapse>
                 <Collapse title="Equipements">
                     <ul>
-                        <li>{logement?.equipments[0]}</li>
-                        <li>{logement?.equipments[1]}</li>
-                        <li>{logement?.equipments[2]}</li>
-                        <li>{logement?.equipments[3]}</li>
-                        <li>{logement?.equipments[4]}</li>
+                        {logement?.equipments.map((equipment, i) => (
+                            <li key={i}>{equipment}</li>
+                        ))}
                     </ul>
 
                 </Collapse>

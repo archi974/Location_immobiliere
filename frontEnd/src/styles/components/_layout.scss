@@ -1,0 +1,95 @@
+header {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+
+    .logo-kasa {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 60%;
+            height: fit-content;
+        }
+    }
+
+    ul {
+        display: flex;
+        list-style: none;
+
+        li {
+            margin-block: 15px;
+            width: 66px;
+
+            &:first-child {
+                margin-right: 11px;
+            }
+
+            a {
+                text-decoration: none;
+                color: $darkRed;
+                font-size: 0.75rem;
+
+                &:hover,
+                &:active,
+                &:focus {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+
+
+}
+
+footer {
+    background-color: #000;
+    display: flex;
+    height: 200px;
+    margin-top: 27px;
+    flex-direction: column;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        margin-bottom: 15px;
+    }
+
+    p {
+        font-size: 0.75rem;
+        width: 122px;
+        display: flex;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width : 1440px) {
+    header {
+        max-width: 1240px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width :1440px) {
+    header {
+        padding: 0;
+        margin: 20px 100px;
+        
+    }
+}
+
+@media only screen and (min-width :1024px){
+    header {
+        ul {
+            li{
+                width: 136px;
+                a {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}

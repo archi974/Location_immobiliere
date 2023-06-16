@@ -8,7 +8,7 @@ export default function About() {
     return (
         <Layout>
             <div className="about">
-                <img src={imgAPropos} alt={altAPropos} />
+                <img src={imgAPropos} alt={altAPropos} width={1200} height={223}/>
                 <div className="collapse">
                     <Collapse title="Fiabilité">
                         <p>Les annonces sur Kasa sont réputées pour leur fiabilité absolue. Les photos des logements sont fidèles à la réalité, et toutes les informations sont vérifiées régulièrement par nos équipes afin de garantir leur exactitude.</p>
