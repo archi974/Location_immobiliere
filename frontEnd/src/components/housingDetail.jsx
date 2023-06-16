@@ -28,7 +28,7 @@ const HousingDetail = () => {
             <div className="housing-owner-info">
                 <div className="housing-info">
                     <h1>{logement?.title}</h1>
-                    <p>{logement?.location}</p>
+                    <h2>{logement?.location}</h2>
                     <ul className='tags'>
                         {logement?.tags.map((item, i) => (
                             <li key={i}>{item}</li>
