@@ -39,6 +39,14 @@
 
 @media only screen and (min-width : 1440px) {
     .banner {
+        .bannerImg {
+            border-radius: 25px;
+        }
+    }
+}
+
+@media only screen and (min-width : 1440px) {
+    .banner {
         margin: 30px 0 22px 0;
         height: 223px;
         border-radius: 25px;

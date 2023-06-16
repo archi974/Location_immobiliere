@@ -24,25 +24,29 @@ const HousingDetail = () => {
     }, [id, navigate]);
 
     return (
-        <article className="housingDetailComponent">
+        <article className="housing-detail-component">
             <SlideShow images={logement?.pictures} />
-            <h1>{logement?.title}</h1>
-            <p>{logement?.location}</p>
-            <ul className='tags'>
-                {logement?.tags.map((item, i) => (
-                    <li key={i}>{item}</li>
-                ))}
-            </ul>
-            <div className='ownerInfo'>
-                <div>
-                    <RatingStar rating={logement?.rating} />
+            <div className="housing-owner-info">
+                <div className="housing-info">
+                    <h1>{logement?.title}</h1>
+                    <p>{logement?.location}</p>
+                    <ul className='tags'>
+                        {logement?.tags.map((item, i) => (
+                            <li key={i}>{item}</li>
+                        ))}
+                    </ul>
                 </div>
-                <div className="ownerProfile">
-                    <p>{logement?.host.name}</p>
-                    <img src={logement?.host.picture} alt="profil du propriétaire" />
+                <div className='owner-info'>
+                    <div>
+                        <RatingStar rating={logement?.rating} />
+                    </div>
+                    <div className="owner-profile">
+                        <p>{logement?.host.name}</p>
+                        <img src={logement?.host.picture} alt="profil du propriétaire" />
+                    </div>
                 </div>
             </div>
-            <div className="collapse">
+            <div className="collapse-housing-detail">
                 <Collapse title="Description">
                     <p>
                         {logement?.description}
@@ -57,6 +61,7 @@ const HousingDetail = () => {
 
                 </Collapse>
             </div>
+
         </article>
     );
 };

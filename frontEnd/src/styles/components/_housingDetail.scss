@@ -1,63 +1,136 @@
-.housingDetailComponent {
+.housing-detail-component {
     margin-inline: 20px;
 
-    h1 {
-        color: $red;
-        font-size: 18px;
-        font-weight: 500;
-        padding: 15px 0 5px 0;
-    }
+    .housing-owner-info {
+        padding-block: 15px 13px;
 
-    p {
-        color: $red;
-        font-size: 14px;
-    }
+        .housing-info {
+            h1 {
+                color: $red;
+                font-size: 18px;
+                font-weight: 500;
+                padding-bottom: 5px;
+            }
 
-    .tags {
-        display: flex;
-        list-style: none;
-        width: 100%;
-        margin: 10px 0 16px 0;
+            p {
+                color: $red;
+                font-size: 14px;
+            }
 
-        li {
-            background-color: $red;
-            color: $white;
-            margin-right: 10px;
-            border-radius: 5px;
-            font-size: 0.75rem;
+            .tags {
+                display: flex;
+                list-style: none;
+                width: 100%;
+                margin: 10px 0 16px 0;
+
+                li {
+                    background-color: $red;
+                    color: $white;
+                    margin-right: 10px;
+                    border-radius: 5px;
+                    font-size: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 3px 3%;
+                    text-align: center;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+
+        .owner-info {
             display: flex;
             align-items: center;
-            justify-content: center;
-            padding: 3px 1rem;
-            text-align: center;
+            justify-content: space-between;
 
-            &:last-child {
-                margin-right: 0;
+            .owner-profile {
+                display: flex;
+                align-items: center;
+
+                p {
+                    width: 93px;
+                    padding-right: 10px;
+                    font-size: 0.75rem;
+                    text-align: right;
+                    color: $red;
+                }
+
+                img {
+                    border-radius: 50%;
+                    height: 32px;
+                }
             }
         }
     }
 
-    .ownerInfo {
+    .collapse-housing-detail {
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: space-between;
-        margin-bottom: 13px;
+        justify-content: center;
+        text-align: center;
+    }
+}
 
-        .ownerProfile {
+@media only screen and (min-width : 1024px) {
+    .housing-detail-component {
+        margin: 0 0 23px 0;
+
+        .housing-owner-info {
             display: flex;
-            align-items: center;
+            justify-content: space-between;
+            padding-block: 24px;
 
-            p {
-                width: 93px;
-                padding-right: 10px;
-                font-size: 0.75rem;
-                text-align: right;
-                color: $red;
+            .housing-info {
+                h1 {
+                    font-size: 36px;
+                }
+        
+                p {
+                    font-size: 18px;
+                }
+        
+                .tags {
+                    li {
+                        font-size: 14px;
+                        border-radius: 25px;
+                    }
+                }
             }
 
-            img {
-                border-radius: 50%;
-                height: 32px;
+            .owner-info {
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+                flex-direction: column-reverse;
+
+                .owner-profile {
+                    p {
+                        font-size: 18px;
+                    }
+
+                    img {
+                        height: 64px;
+                    }
+                }
+            }
+        }
+
+        .collapse-housing-detail {
+            flex-direction: row;
+            align-items: flex-start;
+
+            .collapse-container {
+                margin-bottom: 0;
+                margin-right: 76px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
             }
         }
     }
