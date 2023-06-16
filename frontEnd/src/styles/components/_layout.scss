@@ -8,10 +8,12 @@ header {
     .logo-kasa {
         display: flex;
         align-items: center;
-
-        img {
+        a {
             width: 60%;
-            height: fit-content;
+            img {
+                width: 100%;
+                height: fit-content;
+            }
         }
     }
 

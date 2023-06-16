@@ -5,7 +5,9 @@ const Layout = ({ children }) => {
     <>
       <header>
         <div className="logo-kasa">
-          <img src="https://cdn.discordapp.com/attachments/1081227920770596865/1116666734104031292/LOGO.png" width="210" height="68" alt="logo Kasa" />
+          <a href="/">
+            <img src="https://cdn.discordapp.com/attachments/1081227920770596865/1116666734104031292/LOGO.png" width="210" height="68" alt="logo Kasa" />
+          </a>
         </div>
         <ul>
           <li>
