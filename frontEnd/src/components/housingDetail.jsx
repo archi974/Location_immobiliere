@@ -13,7 +13,6 @@ const HousingDetail = () => {
     useEffect(() => {
         try {
             const logementData = Logements.find(item => item.id === id);
-            console.log(!logementData);
             if (!logementData) {
                 return navigate("/404");
             }

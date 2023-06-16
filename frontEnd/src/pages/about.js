@@ -2,7 +2,7 @@ import Layout from '../components/layout';
 import Collapse from '../components/collapse';
 
 export default function About() {
-    const imgAPropos = "https://cdn.discordapp.com/attachments/1081227920770596865/1117804366695501924/gustavo-alves-YOXSC4zRcxw-unsplash_1.png";
+    const imgAPropos = "https://cdn.discordapp.com/attachments/1081227920770596865/1119379380439875754/gustavo-alves-YOXSC4zRcxw-unsplash_1.jpg";
     const altAPropos = "bannière verte colline avec vue sur montagne";
 
     return (
