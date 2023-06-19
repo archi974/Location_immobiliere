@@ -41,7 +41,7 @@ const HousingDetail = () => {
                     </div>
                     <div className="owner-profile">
                         <p>{logement?.host.name}</p>
-                        <img src={logement?.host.picture} alt="profil du propriétaire" />
+                        <img src={logement?.host.picture} alt="profil du propriétaire" width={64} height={64}/>
                     </div>
                 </div>
             </div>

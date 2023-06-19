@@ -4,7 +4,7 @@ import LocationCard from '../components/locationCard'
 
 export default function Home() {
     const imgHome = "https://cdn.discordapp.com/attachments/1081227920770596865/1116732683737899038/IMG.png";
-    const altHome = "bannière verte colline avec vue sur montagne";
+    const altHome = "bannière verte colline avec ciel nuageux";
     const titleHome = "Chez vous, partout et ailleurs"
 
     return (

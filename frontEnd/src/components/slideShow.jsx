@@ -29,7 +29,7 @@ const SlideShow = ({ images }) => {
             )}
             {
                 images?.map((image, i) => (
-                    <img key={i} src={image} alt="intérieur d'appartement" className={`carouselImg ${currentIndex === i ? 'active' : ''}`} />
+                    <img key={i} src={image} alt="intérieur d'appartement" className={`carouselImg ${currentIndex === i ? 'active' : ''}`} width={1200} height={223}/>
                 ))
             }
 
