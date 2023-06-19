@@ -12,8 +12,8 @@
 ## Projet 6: Créez une application web de location immobilière avec React
 ## Informations globales :
 
-- Status : 🟢 Terminé
-- Projet réaliser seul
+- Statut : 🟢 Terminé
+- Projet réalisé seul
 - Lien vers le [GitHub](https://github.com/archi974/Location_immobiliere)
 
 ## Mise en situation :
