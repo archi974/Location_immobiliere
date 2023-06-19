@@ -9,7 +9,7 @@
     </a>
 </div>
 
-## Projet : Créez une application web de location immobilière avec React
+## Projet 6: Créez une application web de location immobilière avec React
 ## Informations globales :
 
 - Status : 🟢 Terminé
@@ -18,11 +18,11 @@
 
 ## Mise en situation :
 
-Kasa vous recrute en tant que développeur front-end en freelance pour développer sa nouvelle plateforme web. Kasa est dans le métier de la location d’appartements entre particuliers depuis près de 10 ans maintenant. Avec plus de 500 annonces postées chaque jour, Kasa fait partie des leaders de la location d’appartements entre particuliers en France.
+<p align="justify">Kasa vous recrute en tant que développeur front-end en freelance pour développer sa nouvelle plateforme web. Kasa est dans le métier de la location d’appartements entre particuliers depuis près de 10 ans maintenant. Avec plus de 500 annonces postées chaque jour, Kasa fait partie des leaders de la location d’appartements entre particuliers en France.</p>
 
-Le site de Kasa a été codé il y a maintenant plus de 10 ans en ASP.NET avec un code legacy important. Laura, la CTO, a donc lancé une refonte totale pour passer à une stack complète en JavaScript avec NodeJS côté back-end, et React côté front-end. Kasa en a également profité pour commander de nouvelles maquettes auprès de son designer habituel, qui est en freelance. Un gros chantier pour cette année !
+<p align="justify">Le site de Kasa a été codé il y a maintenant plus de 10 ans en ASP.NET avec un code legacy important. Laura, la CTO, a donc lancé une refonte totale pour passer à une stack complète en JavaScript avec NodeJS côté back-end, et React côté front-end. Kasa en a également profité pour commander de nouvelles maquettes auprès de son designer habituel, qui est en freelance. Un gros chantier pour cette année !</p>
 
-Le recrutement de la personne en charge du back-end n'est pas terminé et va prendre plus de temps que prévu. Du coup, il va falloir que tu fasses sans pour le moment. Je t'ai extrait les 20 dernières annonces de logements dans [ce fichier JSON](https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P9+React+1/logements.json) pour que tu puisses construire le Front qui correspond.
+<p align="justify">Le recrutement de la personne en charge du back-end n'est pas terminé et va prendre plus de temps que prévu. Du coup, il va falloir que tu fasses sans pour le moment. Je t'ai extrait les 20 dernières annonces de logements dans [ce fichier JSON](https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P9+React+1/logements.json) pour que tu puisses construire le Front qui correspond.</p>
 
 ## Objectif :
 
@@ -33,7 +33,7 @@ Le recrutement de la personne en charge du back-end n'est pas terminé et va pre
 - Créer des composants banner et card ✅
 - Créer le composant collapse ✅
 - Ajouter la page d'erreur 404 avec redirection d'URL ✅
-- Ajouter le composant Slideshow pour le carrouselle ✅
+- Ajouter le composant Slideshow pour le carrousel ✅
 - Améliorer la redirection d'erreur 404 en l'ajoutant aux URL avec id fausse ✅
 - Rendre les pages responsive desktop et mobile ✅
 - Finalisez le rendu esthétique du site en ce basant sur la maquette ✅
