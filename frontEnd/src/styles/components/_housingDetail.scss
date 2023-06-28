@@ -76,10 +76,16 @@
         text-align: center;
     }
 }
-
-@media only screen and (min-width : 1024px) {
-    .housing-detail-component {
+@media only screen and (min-width: 1440px) {
+    article.housing-detail-component {
         margin: 0 0 23px 0;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .housing-detail-component {
+        padding: 12px 0 0 0;
+        margin: 0 20px 23px 20px;
 
         .housing-owner-info {
             display: flex;

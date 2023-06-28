@@ -22,12 +22,13 @@
     .about {
         img {
             content: url("https://cdn.discordapp.com/attachments/1081227920770596865/1119378612597043322/kalen-emsley-Bkci_8qcdvQ-unsplash_2.jpg");
+            margin-bottom: 38px;
         }
     }
 }
 
-@media only screen and (min-width : 1024px) {
+@media only screen and (min-width : 1440px) {
     .about {
-        margin: 19px 0;
+        margin: 0 0 19px 0;
     }
 }

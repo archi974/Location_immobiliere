@@ -4,12 +4,16 @@ header {
     justify-content: space-between;
     width: 100%;
     padding: 20px;
+    max-width: 1240px;
+    margin: 0 auto;
 
     .logo-kasa {
         display: flex;
         align-items: center;
+
         a {
             width: 60%;
+
             img {
                 width: 100%;
                 height: fit-content;
@@ -22,6 +26,8 @@ header {
         list-style: none;
 
         li {
+            display: flex;
+            justify-content: flex-end;
             margin-block: 15px;
             width: 66px;
 
@@ -71,16 +77,9 @@ footer {
     }
 }
 
-@media only screen and (max-width : 1440px) {
-    header {
-        max-width: 1240px;
-        margin: 0 auto;
-    }
-}
-
 @media only screen and (min-width :1440px) {
     header {
-        padding: 20px 105px;
+        padding: 45px 0 38px 0;
     }
 }
 
@@ -97,8 +96,10 @@ footer {
             }
         }
     }
+
     footer {
         padding-block: 66px 29px;
+
         p {
             font-size: 1.5rem;
             width: 100%;

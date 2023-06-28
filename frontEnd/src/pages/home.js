@@ -9,8 +9,10 @@ export default function Home() {
 
     return (
         <Layout>
-            <Banner title={titleHome} imgSrc={imgHome} imgAlt={altHome}/>
-            <LocationCard />
+            <div className="home">
+                <Banner title={titleHome} imgSrc={imgHome} imgAlt={altHome} />
+                <LocationCard />
+            </div>
         </Layout>
     )
 }
