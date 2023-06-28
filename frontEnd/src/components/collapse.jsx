@@ -1,16 +1,21 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const Collapse = ({ title, children }) => {
     const [isOpen, setIsOpen] = useState(false);
     const contentRef = useRef(null);
+    const [contentHeight, setContentHeight] = useState(0);
 
     const handleToggle = () => {
         setIsOpen(!isOpen);
     };
-    const getContentHeight = () => {
-        console.log(contentRef);
-        return isOpen ? contentRef.current.scrollHeight + "px" : "0";
-    };
+
+    useEffect(() => {
+        if (isOpen) {
+            setContentHeight(contentRef.current.scrollHeight);
+          } else {
+            setContentHeight(0);
+          }
+    }, [isOpen]);
 
     return (
         <div className="collapse-container">
@@ -18,11 +23,7 @@ const Collapse = ({ title, children }) => {
                 <h3>{title}</h3>
                 <span className={isOpen ? "arrow up" : "arrow down"}></span>
             </button>
-            <div
-                ref={contentRef}
-                className={`collapse-content ${isOpen ? "open" : ""}`}
-                style={{ maxHeight: getContentHeight() }}
-            >
+            <div ref={contentRef} className={`collapse-content ${isOpen ? "open" : ""}`}>
                 {children}
             </div>
         </div>
