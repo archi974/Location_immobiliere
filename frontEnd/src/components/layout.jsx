@@ -1,20 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const Layout = ({ children }) => {
+  const [activeLink, setActiveLink] = useState("");
+
+  const handleLinkClick = (link) => {
+    setActiveLink(link);
+  };
+
   return (
     <>
       <header>
         <div className="logo-kasa">
-          <a href="/">
+          <NavLink to="/">
             <img src="https://cdn.discordapp.com/attachments/1081227920770596865/1116666734104031292/LOGO.png" width={210} height={68} alt="logo Kasa" />
-          </a>
+          </NavLink>
         </div>
         <ul>
-          <li>
-            <a href="/">Accueil</a>
+          <li className={activeLink === "/" ? "active" : ""}>
+            <NavLink to="/" onClick={() => handleLinkClick("")}>
+              Accueil
+            </NavLink>
           </li>
-          <li>
-            <a href="/a-propos">A Propos</a>
+          <li className={activeLink === "/a-propos" ? "active" : ""}>
+            <NavLink to="/a-propos" onClick={() => handleLinkClick("a-propos")}>
+              A Propos
+            </NavLink>
           </li>
         </ul>
       </header>

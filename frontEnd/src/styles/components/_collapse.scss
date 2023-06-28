@@ -43,12 +43,18 @@
     }
 
     .collapse-content {
-        display: flex;
-        justify-items: center;
-        align-items: center;
         border-radius: 0 0 5px 5px;
-        padding: 3%;
         font-size: 0.75rem;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out;
+        
+        &.open {
+            padding: 3%;
+            justify-items: center;
+            align-items: center;
+            height: auto;
+            max-height: 100px;
+        }
 
         p {
             color: $red;
@@ -75,15 +81,18 @@
 @media only screen and (min-width : 1024px) {
     .collapse-container {
         width: 80%;
+
         button {
             h3 {
                 font-size: 18px;
             }
         }
-        .collapse-content{
+
+        .collapse-content {
             p {
                 font-size: 14px;
             }
+
             ul {
                 li {
                     font-size: 14px;

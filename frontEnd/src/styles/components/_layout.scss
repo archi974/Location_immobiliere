@@ -31,6 +31,10 @@ header {
             margin-block: 15px;
             width: 66px;
 
+            .active {
+                text-decoration: underline;
+            }
+
             &:first-child {
                 margin-right: 11px;
             }
