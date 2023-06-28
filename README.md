@@ -93,10 +93,10 @@ Général :
 
 ### Utilisation
 
-- git clone git@github.com:archi974/Location_immobiliere.git
-- cd frontEnd
-- npm i
-- npm start
+- Récupérer le dépôt de GitHub `git clone git@github.com:archi974/Location_immobiliere.git`.
+- Ce placer dans dossier qui contient le serveur depuis un Terminal `cd frontEnd`.
+- Installer les dépendances `npm i`.
+- Lancer le serveur `npm start`.
 
 ## Lien utile
 
