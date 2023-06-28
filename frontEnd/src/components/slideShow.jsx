@@ -29,7 +29,14 @@ const SlideShow = ({ images }) => {
             )}
             {
                 images?.map((image, i) => (
-                    <img key={i} src={image} alt="intérieur d'appartement" className={`carouselImg ${currentIndex === i ? 'active' : ''}`} width={1200} height={223}/>
+                    <div key={i} className={`carousel-content ${currentIndex === i ? 'active' : ''}`}>
+                        <img src={image} alt="intérieur d'appartement" className={`carouselImg`} width={1200} height={223} />
+                        {images?.length > 1 && (
+                            <p className="carouselText">
+                                {`${i + 1}/${images.length}`}
+                            </p>
+                        )}
+                    </div>
                 ))
             }
 

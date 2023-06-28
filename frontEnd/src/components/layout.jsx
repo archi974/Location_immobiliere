@@ -11,10 +11,10 @@ const Layout = ({ children }) => {
         </div>
         <ul>
           <li>
-            <a href="/">ACCUEIL</a>
+            <a href="/">Accueil</a>
           </li>
           <li>
-            <a href="/a-propos">A PROPOS</a>
+            <a href="/a-propos">A Propos</a>
           </li>
         </ul>
       </header>

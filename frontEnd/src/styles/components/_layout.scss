@@ -33,6 +33,7 @@ header {
                 text-decoration: none;
                 color: $red;
                 font-size: 0.75rem;
+                text-transform: uppercase;
 
                 &:hover,
                 &:active,
@@ -90,6 +91,7 @@ footer {
                 width: 136px;
 
                 a {
+                    text-transform: capitalize;
                     font-size: 1.5rem;
                 }
             }

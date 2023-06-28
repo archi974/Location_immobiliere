@@ -15,6 +15,7 @@
         justify-content: center;
         cursor: pointer;
         top: 0;
+        z-index: 1;
     }
 
     .buttonRight {
@@ -25,25 +26,47 @@
         left: 0;
     }
 
-    img {
-        border-radius: 10px;
-        width: 100%;
-        height: auto;
+    .carousel-content {
+        position: relative;
         display: none;
 
         &.active {
             display: flex;
             height: 100%;
+        }
+
+        img {
+            border-radius: 10px;
+            width: 100%;
+            height: auto;
             object-fit: cover;
+
+        }
+
+        .carouselText {
+            display: none;
+            position: absolute;
+            top: 95%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 18px;
+            color: white;
         }
     }
+
 }
 
 @media only screen and (min-width : 1024px) {
     .carousel {
         height: 415px;
-        img {
-            border-radius: 25px;
+
+        .carousel-content {
+            img {
+                border-radius: 25px;
+            }
+            .carouselText{
+                display: flex;
+            }
         }
     }
 }
