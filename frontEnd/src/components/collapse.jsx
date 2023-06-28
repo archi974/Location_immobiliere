@@ -3,17 +3,17 @@ import React, { useState, useEffect, useRef } from "react";
 const Collapse = ({ title, children }) => {
     const [isOpen, setIsOpen] = useState(false);
     const contentRef = useRef(null);
-    const [contentHeight, setContentHeight] = useState(0);
-
+    const contentHeightRef = useRef(0);
+    
     const handleToggle = () => {
         setIsOpen(!isOpen);
     };
 
     useEffect(() => {
         if (isOpen) {
-            setContentHeight(contentRef.current.scrollHeight);
+            contentHeightRef.current = contentRef.current.scrollHeight;
           } else {
-            setContentHeight(0);
+            contentHeightRef.current = 0;
           }
     }, [isOpen]);
 
