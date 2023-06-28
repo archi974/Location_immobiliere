@@ -77,6 +77,8 @@ Général :
 
 ## Instruction d'installation et d'utilisation :
 
+# Installation
+
 - Installer [Visual Studio Code](https://code.visualstudio.com/).
 - Avoir un terminal en bash.
 - Crée un dépôt GitHub.
@@ -88,6 +90,13 @@ Général :
 - Lancer l'application `npm start`
 - Ouvrez un autre terminal **(raccourci mac cmd + n)**
 - Dans l'application React installer [Sass](https://create-react-app.dev/docs/adding-a-sass-stylesheet/) `npm install node-sass --save`
+
+# Utilisation
+
+- git clone git@github.com:archi974/Location_immobiliere.git
+- cd frontEnd
+- npm i
+- npm start
 
 ## Lien utile
 
