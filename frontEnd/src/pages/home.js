@@ -1,6 +1,7 @@
 import Layout from '../components/layout';
 import Banner from '../components/banner';
 import LocationCard from '../components/locationCard'
+import Logements from '../fixture/logements.json'
 
 export default function Home() {
     const imgHome = "https://cdn.discordapp.com/attachments/1081227920770596865/1116732683737899038/IMG.png";
@@ -11,7 +12,11 @@ export default function Home() {
         <Layout>
             <div className="home">
                 <Banner title={titleHome} imgSrc={imgHome} imgAlt={altHome} />
-                <LocationCard />
+                <div className="card-container">
+                    {Logements.map((item, i) => (
+                        <LocationCard logement={item} key={i} />
+                    ))}
+                </div>
             </div>
         </Layout>
     )

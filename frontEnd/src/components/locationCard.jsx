@@ -1,23 +1,20 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import Logements from '../fixture/logements.json'
 
-const LocationCard = () => {
 
+const LocationCard = ({logement}) => {
+  const {id, cover, title} = logement;
+  
   return (
-    <div className="card-container">
-      {Logements.map((item, i) => (
-        <article key={i} className="card-bloc-item">
-          <Link to={`/fiche-logement/${item.id}`}>
+        <article className="card-bloc-item">
+          <Link to={`/fiche-logement/${id}`}>
             <div className="card-title">
-              <h2>{item.title}</h2>
+              <h2>{title}</h2>
             </div>
-            <img src={item.cover} alt={item.title} width={360} height={255} />
+            <img src={cover} alt={title} width={360} height={255} />
           </Link>
 
         </article>
-      ))}
-    </div>
   );
 };
 
