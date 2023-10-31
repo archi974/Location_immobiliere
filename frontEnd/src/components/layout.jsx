@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const Layout = ({ children }) => {
-  const [activeLink, setActiveLink] = useState("");
+  const [activeLink, setActiveLink] = useState(true);
 
-  const handleLinkClick = (link) => {
-    setActiveLink(link);
+  const handleLinkClick = () => {
+    setActiveLink(!activeLink);
   };
 
   return (
@@ -17,13 +17,13 @@ const Layout = ({ children }) => {
           </NavLink>
         </div>
         <ul>
-          <li className={activeLink === "/" ? "active" : ""}>
-            <NavLink to="/" onClick={() => handleLinkClick("")}>
+          <li className={activeLink ? "" : "active"}>
+            <NavLink to="/" onClick={handleLinkClick}>
               Accueil
             </NavLink>
           </li>
-          <li className={activeLink === "/a-propos" ? "active" : ""}>
-            <NavLink to="/a-propos" onClick={() => handleLinkClick("a-propos")}>
+          <li className={activeLink ? "" : "active"}>
+            <NavLink to="/a-propos" onClick={handleLinkClick}>
               A Propos
             </NavLink>
           </li>
